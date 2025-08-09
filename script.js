@@ -1,262 +1,216 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // -------------------------------
-  // Мобільне меню
-  // -------------------------------
-  const burgerBtn = document.querySelector('.burger-menu');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeBtn = document.getElementById('closeMobileMenu');
-  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-  const menuLinks = document.querySelectorAll('.mobile-menu-link');
-  const scrollButtons = document.querySelector('.scroll-buttons');
-  const scrollUpBtn = document.querySelector('.scroll-btn.up');
-  const scrollDownBtn = document.querySelector('.scroll-btn.down');
+function init() {
+  // === 1. Перемикач теми ===
+  const toggleBtn = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
 
-  function closeMobileMenu() {
-    mobileMenu.classList.remove('open');
-    mobileMenuOverlay.style.display = 'none';
-    document.body.style.overflow = 'auto';
-    if (scrollButtons) scrollButtons.style.display = 'flex';
-  }
-
-  burgerBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-    mobileMenuOverlay.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    if (scrollButtons) scrollButtons.style.display = 'none';
-  });
-
-  closeBtn.addEventListener('click', closeMobileMenu);
-  mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-
-  menuLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const targetId = link.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-      }
-      closeMobileMenu();
-    });
-  });
-
-  if (scrollUpBtn) {
-    scrollUpBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
+  html.setAttribute('data-theme', initialTheme);
+  if (toggleBtn) {
+    toggleBtn.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
+    toggleBtn.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'dark' ? '☀️' : '🌙';
     });
   }
 
-  if (scrollDownBtn) {
-    scrollDownBtn.addEventListener('click', () => {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    });
-  }
-
-  // Свайп для закриття мобільного меню
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  mobileMenu.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  mobileMenu.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    const swipeDistance = touchEndX - touchStartX;
-    const minSwipeDistance = 50;
-    if (Math.abs(swipeDistance) > minSwipeDistance) {
-      closeMobileMenu();
+  // === 2. Оновлення рейтингу ===
+  const data = {
+    mainRating: 6.9,
+    mainVotes: 330,
+    imdb: { rating: 7.2, votes: "179 278" },
+    tmdb: { rating: 6.787, votes: 1804 }
+  };
+  function generateStars(rating) {
+    const stars = [], fiveScale = rating / 2;
+    for (let i = 0; i < 5; i++) {
+      if (fiveScale >= i + 1) stars.push("★");
+      else if (fiveScale > i && fiveScale < i + 1) stars.push("☆");
+      else stars.push("✩");
     }
+    return stars.join("");
+  }
+  const elNum = document.querySelector(".rating-number-kino");
+  const elStars = document.querySelector(".rating-stars-kino");
+  const elVotes = document.querySelector(".rating-votes-kino");
+  const elImdb = document.querySelector(".imdb-rating");
+  const elTmdb = document.querySelector(".tmdb-rating");
+  if (elNum) elNum.textContent = data.mainRating.toFixed(1);
+  if (elStars) elStars.textContent = generateStars(data.mainRating);
+  if (elVotes) elVotes.textContent = `Голосів: ${data.mainVotes}`;
+  if (elImdb) elImdb.textContent = `${data.imdb.rating} (${data.imdb.votes})`;
+  if (elTmdb) elTmdb.textContent = `${data.tmdb.rating.toFixed(3)} (${data.tmdb.votes})`;
+
+  // === 3. Мобільне меню ===
+  const navBtn = document.querySelector('.nav-toggle-btn');
+  const navPanel = document.querySelector('.navigation-panel');
+  const navClose = document.querySelector('.nav-close-btn');
+  if (navBtn && navPanel && navClose) {
+    navBtn.addEventListener('click', () => navPanel.classList.remove('hidden'));
+    navClose.addEventListener('click', () => navPanel.classList.add('hidden'));
   }
 
-  // -------------------------------
-  // Показати ще (проєкти)
-  // -------------------------------
-  const items = document.querySelectorAll('.project-item');
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  const itemsPerClick = 4;
-  let currentIndex = 0;
+  // === 4. Фільтри: відкриття/вибір ===
+  const filterToggles = document.querySelectorAll('.filter-toggle');
+  const filters = {
+    genre: '',
+    country: '',
+    year: '',
+    date: ''
+  };
 
-  function showNextItems() {
-    const nextItems = Array.from(items).slice(currentIndex, currentIndex + itemsPerClick);
-    nextItems.forEach((item, index) => {
-      setTimeout(() => {
-        item.classList.add('visible');
-      }, index * 100);
-    });
-    currentIndex += itemsPerClick;
-    if (currentIndex >= items.length) {
-      loadMoreBtn.style.display = 'none';
-    }
-  }
-
-  if (loadMoreBtn && items.length > 0) {
-    showNextItems();
-    loadMoreBtn.addEventListener('click', showNextItems);
-  }
-
-  // -------------------------------
-  // Кнопка скрол вправо/вліво
-  // -------------------------------
-  const scrollContainer = document.getElementById('projects-container');
-  const scrollBtn = document.getElementById('scrollNextBtn');
-
-  if (scrollContainer && scrollBtn) {
-    scrollBtn.addEventListener('click', () => {
-      const scrollAmount = scrollContainer.offsetWidth * 0.1;
-      if (scrollContainer.scrollLeft + scrollAmount >= scrollContainer.scrollWidth - scrollAmount) {
-        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
-    });
-  }
-
-  // -------------------------------
-  // Кнопка "вгору" (20% скролу)
-  // -------------------------------
-  const toTopBtn = document.getElementById('to-top');
-  const THRESHOLD = 0.20;
-
-  if (toTopBtn) {
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollY > pageHeight * THRESHOLD) {
-        toTopBtn.classList.add('show');
-      } else {
-        toTopBtn.classList.remove('show');
+  filterToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      filterToggles.forEach(otherToggle => {
+        if (otherToggle !== toggle) {
+          const menu = otherToggle.nextElementSibling;
+          if (menu && menu.classList.contains('filter-menu')) {
+            menu.classList.add('hidden');
+          }
+        }
+      });
+      const menu = toggle.nextElementSibling;
+      if (menu && menu.classList.contains('filter-menu')) {
+        menu.classList.toggle('hidden');
       }
     });
 
-    toTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // -------------------------------
-  // Показ резюме зверху поверх сайту
-  // -------------------------------
-  const resume = document.getElementById('resume');
-  const resumeLinks = document.querySelectorAll('.show-resume');
-
-  function outsideClickListener(e) {
-    if (resume && !resume.contains(e.target)) {
-      resume.style.display = 'none';
-      document.removeEventListener('mousedown', outsideClickListener);
+    const menu = toggle.nextElementSibling;
+    if (menu) {
+      const items = menu.querySelectorAll('li');
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          items.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+          const category = toggle.textContent.split(':')[0];
+          toggle.textContent = `${category}: ${item.textContent.trim()}`;
+          menu.classList.add('hidden');
+          filters[category.toLowerCase()] = item.textContent.trim();
+        });
+      });
     }
-  }
+  });
 
-  if (resume && !resume.querySelector('.close-resume')) {
-    const closeBtn = document.createElement('button');
-    closeBtn.textContent = '×';
-    closeBtn.className = 'close-resume';
-    Object.assign(closeBtn.style, {
-      position: 'absolute',
-      top: '10px',
-      right: '20px',
-      fontSize: '24px',
-      background: 'none',
-      border: 'none',
-      cursor: 'pointer',
-      color: '#333',
-      zIndex: 10000,
-    });
-    resume.appendChild(closeBtn);
-
-    closeBtn.addEventListener('click', () => {
-      resume.style.display = 'none';
-      document.removeEventListener('mousedown', outsideClickListener);
-    });
-  }
-
-  if (resume && resumeLinks.length > 0) {
-    resumeLinks.forEach(link => {
-      link.addEventListener('click', function (event) {
-        event.preventDefault();
-        resume.style.display = 'block';
-        resume.scrollTop = 0;
-
-        setTimeout(() => {
-          document.addEventListener('mousedown', outsideClickListener);
-        }, 0);
-
-        // Закриваємо мобільне меню, якщо відкрито
-        closeMobileMenu?.();
+  // === 5. Вибір року ===
+  const yearToggle = document.querySelector('[data-filter="year"] .filter-toggle');
+  const yearMenu = document.querySelector('[data-filter="year"] .filter-menu');
+  if (yearMenu && yearToggle) {
+    const yearItems = yearMenu.querySelectorAll('li');
+    yearItems.forEach(item => {
+      item.addEventListener('click', () => {
+        yearItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        const category = yearToggle.textContent.split(':')[0];
+        yearToggle.textContent = `${category}: ${item.textContent.trim()}`;
+        yearMenu.classList.add('hidden');
+        filters['year'] = item.textContent.trim();
       });
     });
   }
 
-  // -------------------------------
-  // Модальне вікно зворотного зв'язку
-  // -------------------------------
-  const modalOverlay = document.querySelector('.modal-overlay');
-  const openModalBtn = document.querySelector('.one-button');
-  const closeModalBtn = document.querySelector('.modal-close');
-
-  if (modalOverlay && openModalBtn && closeModalBtn) {
-    openModalBtn.addEventListener('click', () => {
-      modalOverlay.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-      modalOverlay.classList.remove('is-open');
-      document.body.style.overflow = '';
-    });
-
-    modalOverlay.addEventListener('click', (event) => {
-      if (event.target === modalOverlay) {
-        modalOverlay.classList.remove('is-open');
-        document.body.style.overflow = '';
-      }
-    });
+  // === 6. Кнопка "Підібрати" ===
+  const applyBtn = document.querySelector('.apply-btn');
+  if (applyBtn) {
+    applyBtn.addEventListener('click', () => filterMovies(filters));
   }
 
-  // -------------------------------
-  // Обробка форми зворотного зв'язку
-  // -------------------------------
-  const form = document.querySelector('.modal-form');
-
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const privacyCheckbox = form.querySelector('#user-privacy');
-      if (!privacyCheckbox || !privacyCheckbox.checked) {
-        alert('Будь ласка, прийміть умови Приватної політики перед відправкою.');
-        privacyCheckbox?.focus();
-        return;
-      }
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          alert('Дякуємо! Ваші дані надіслані.');
-          form.reset();
-          if (modalOverlay) {
-            modalOverlay.classList.remove('is-open');
-            document.body.style.overflow = '';
-          }
-        } else {
-          alert('Виникла помилка при відправці форми. Спробуйте пізніше.');
+  // === 7. Кнопка "Скинути" ===
+  const resetBtn = document.querySelector('.reset-btn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      Object.keys(filters).forEach(key => filters[key] = '');
+      document.querySelectorAll('.filter-item').forEach(item => {
+        const toggle = item.querySelector('.filter-toggle');
+        const category = item.getAttribute('data-filter');
+        let defaultText = '';
+        switch (category) {
+          case 'genre': defaultText = 'Жанр'; break;
+          case 'year': defaultText = 'Виберіть рік'; break;
+          case 'country': defaultText = 'Країна'; break;
+          case 'date': defaultText = 'По даті публікації'; break;
+          default: defaultText = toggle.textContent.split(':')[0]; break;
         }
-      } catch (error) {
-        alert('Помилка мережі. Спробуйте пізніше.');
-      }
+        toggle.textContent = defaultText;
+        item.querySelectorAll('li').forEach(li => li.classList.remove('active'));
+      });
+      filterMovies(filters);
     });
   }
-});
+
+  // === 8. Підготовка повідомлення "ФІЛЬМ НЕ ЗНАЙДЕНО" ===
+  const moviesList = document.querySelector('.movies-list');
+  if (moviesList && !document.querySelector('.no-movies-msg')) {
+    const msgEl = document.createElement('div');
+    msgEl.className = 'no-movies-msg';
+    msgEl.textContent = 'ФІЛЬМ НЕ ЗНАЙДЕНО';
+    Object.assign(msgEl.style, {
+      color: 'red',
+      fontWeight: 'bold',
+      marginTop: '20px',
+      display: 'none'
+    });
+    const moviesContainer = moviesList.parentNode || moviesList;
+    moviesContainer.appendChild(msgEl);
+  }
+
+  // === 9. Фільтрація фільмів ===
+  function filterMovies(filters) {
+    if (!moviesList) return;
+
+    let anyVisible = false;
+    for (const movieEl of moviesList.children) {
+      if (!movieEl.classList.contains('movies-list-movie-card')) continue;
+
+      const year = (movieEl.getAttribute('data-year') || '').toLowerCase();
+      const genre = (movieEl.getAttribute('data-genre') || '').toLowerCase();
+      const country = (movieEl.getAttribute('data-country') || '').toLowerCase();
+      const date = (movieEl.getAttribute('data-date') || '').toLowerCase();
+
+      let visible = true;
+
+      for (const [key, val] of Object.entries(filters)) {
+        if (!val) continue;
+        const valLower = val.toLowerCase();
+
+        switch (key) {
+          case 'year':
+            if (year !== valLower) visible = false;
+            break;
+          case 'genre':
+            if (!genre.split(',').map(s => s.trim()).includes(valLower)) visible = false;
+            break;
+          case 'country':
+            if (!country.split(',').map(s => s.trim()).includes(valLower)) visible = false;
+            break;
+          case 'date':
+            if (date !== valLower) visible = false;
+            break;
+        }
+
+        if (!visible) break;
+      }
+
+      movieEl.style.display = visible ? '' : 'none';
+      if (visible) anyVisible = true;
+    }
+
+    const msgEl = document.querySelector('.no-movies-msg');
+    if (msgEl) {
+      msgEl.style.display = anyVisible ? 'none' : 'block';
+    }
+  }
+
+  // === 10. Початковий показ усіх фільмів ===
+  filterMovies(filters);
+}
+
+// Запуск
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
