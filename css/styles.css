@@ -627,29 +627,24 @@ section {
   position: absolute;
   top: 16px;
   right: 16px;
-  border-radius: 50%;
-  /* background-color: #e7e9fc; */
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .mobile-menu-btn-svg {
-  display: block;
-} */
 
 .close-mobile-menu {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 24px; /* клікабельна зона */
+  height: 24px;
   border-radius: 50%;
+  background-color: #d3e97a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+}
+
+.mobile-menu-btn-svg {
+  display: block;
+  fill: #736a6a;
 }
 
 /* мобільне меню кінець */
