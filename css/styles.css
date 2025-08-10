@@ -453,6 +453,24 @@ section {
   border-radius: 8px;
 }
 
+.site {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-weight: 700;
+  /* width: 10%; */
+  font-size: 14px;
+  line-height: 1;
+  background-color: #d3e97a;
+  text-transform: uppercase;
+  color: #383737;
+  border: 1px solid #484848;
+  border-radius: 100px;
+  padding: 16px 24px;
+  margin-bottom: 0px;
+}
+
 /* portfolio кінець */
 
 /* connect початок */
