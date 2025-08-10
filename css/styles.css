@@ -578,6 +578,12 @@ section {
   letter-spacing: -0.02em;
 }
 
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .container-section-four-ul-project {
   display: flex;
   flex-direction: column;
@@ -630,6 +636,29 @@ section {
   border-radius: 100px;
   padding: 16px 24px;
   margin-bottom: 0px;
+}
+
+@media screen and (min-width: 1440px) {
+  .portfolio-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px; /* відступ між елементами */
+    justify-content: flex-start;
+  }
+
+  .container-section-four-ul-project {
+    flex: 0 0 calc((100% / 3) - 20px); /* 3 в ряд, мінус половина гапу */
+    box-sizing: border-box;
+  }
+
+  .img {
+    height: 280px;
+  }
+
+  .project-list-p-opis {
+    height: 100px;
+  }
 }
 
 /* portfolio кінець */
@@ -740,6 +769,41 @@ section {
   line-height: 1;
   text-transform: uppercase;
   color: #0a0a0a;
+}
+
+@media screen and (min-width: 1440px) {
+  .connect-container {
+    flex-direction: row;
+  }
+
+  .connect-container-one {
+    align-self: flex-start;
+  }
+
+  .connect-container-one-h {
+    font-size: 76px;
+  }
+
+  .connect-container-one-p {
+    font-size: 18px;
+  }
+
+  .connect-span-resume,
+  .connect-span-a {
+    font-size: 18px;
+  }
+
+  .about-me-svg-link-connect {
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-input {
+    border-radius: 4px;
+    padding: 12px 16px;
+    width: 600px;
+    height: 51px;
+  }
 }
 
 /* connect кінець */
