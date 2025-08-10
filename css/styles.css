@@ -404,3 +404,109 @@ section {
 }
 
 /* experience кінець */
+
+/* connect початок */
+
+.connect-container {
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.connect-container-one {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+}
+
+.connect-container-one-h {
+  font-weight: 400;
+  font-size: 43px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.connect-container-one-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c7c7c7;
+}
+
+.connect-svg {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.connect-span-resume,
+.connect-span-a {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.about-me-svg-link-connect {
+  fill: #d3e97a;
+}
+
+.connect-container-two {
+  width: 100%;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c7c7c7;
+  font-family: "Manrope", sans-serif;
+}
+
+.div-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-input {
+  height: 30px;
+  margin-bottom: 14px;
+}
+
+.modal-textarea {
+  height: 120px;
+  margin-bottom: 24px;
+}
+
+.modal-button {
+  border-radius: 100px;
+  padding: 20px 40px;
+  width: 140px;
+  height: 54px;
+  background: #d3e97a;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+/* connect кінець */
+/* footer початок */
+.container_footer-p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c7c7c7;
+}
+/* footer кінець */
