@@ -708,6 +708,11 @@ section {
   font-size: 16px;
   line-height: 1.6;
   color: #fff;
+
+  text-decoration-line: underline;
+  text-decoration-color: #d3e97a;
+  text-decoration-thickness: 2px; /* товщина */
+  text-underline-offset: 1px; /* відстань від тексту */
 }
 
 .about-me-svg-link-connect {
