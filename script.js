@@ -30,3 +30,12 @@ menuLinks.forEach(link => {
     mobileMenu.classList.remove('open');
   });
 });
+
+  document.getElementById('downloadResumeBtn').addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = './files/Vitalii-Baranov-Zivotopis.pdf';
+    link.download = 'Vitalii-Baranov-Zivotopis.pdf';  // імʼя файлу при скачуванні
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
