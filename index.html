@@ -31,13 +31,10 @@
         <nav class="navigation" aria-label="Головне меню">
           <p class="logo">FrontEnd</p>
           <ul class="header-ul">
-            <li class="header-li">
-              <a href="#hero" class="active">Головна</a>
-            </li>
-            <li class="header-li"><a href="#about">Про мене</a></li>
-            <li class="header-li"><a href="#portfolio">Портфоліо</a></li>
-            <li class="header-li"><a href="#skills">Навички</a></li>
-            <li class="header-li"><a href="#contact">Контакти</a></li>
+            <li class="header-li"><a href="#about">About Me</a></li>
+            <li class="header-li"><a href="#capabilities">Capabilities</a></li>
+            <li class="header-li"><a href="#portfolio">Portfolio</a></li>
+            <li class="header-li"><a href="#connect">Connect</a></li>
           </ul>
         </nav>
         <!-- Бургер-меню початок -->
@@ -152,64 +149,63 @@
       <section id="aboutme" class="about-me">
         <div class="container about-me-container">
           <h1 class="about-me-h">About Me</h1>
-          <p class="about-me-p">
-            I am a front-end developer based in Liberec, Czech Republic. I have
-            an educational background in computer systems engineering.
-          </p>
-          <p class="about-me-p about-me-p-two">
-            I am a front-end developer based in Liberec, Czech Republic, looking
-            for exciting opportunities. I have an educational background in
-            computer systems. I like to focus on accessibility when developing.
-            I am passionate and curious about solving problems. Currently, I am
-            learning JavaScript. When I’m not programming, I enjoy spending time
-            with my family. I am constantly learning to improve my skills.
-          </p>
-          <div class="button-a-a">
-            <button type="button" class="about-me-button">
-              <!-- <div class="text" id="downloadResumeBtn" style="cursor: pointer">
-                Download Resume
-              </div> -->
+          <div class="about-me-right">
+            <p class="about-me-p">
+              I am a front-end developer based in Liberec, Czech Republic. I
+              have an educational background in computer systems engineering.
+            </p>
+            <p class="about-me-p about-me-p-two">
+              I am a front-end developer based in Liberec, Czech Republic,
+              looking for exciting opportunities. I have an educational
+              background in computer systems. I like to focus on accessibility
+              when developing. I am passionate and curious about solving
+              problems. Currently, I am learning JavaScript. When I’m not
+              programming, I enjoy spending time with my family. I am constantly
+              learning to improve my skills.
+            </p>
+            <div class="button-a-a">
+              <button type="button" class="about-me-button">
+                <a
+                  href="./files/Vitalii-Baranov-Zivotopis.pdf"
+                  download
+                  class="text"
+                  >Download Resume</a
+                >
+                <div class="icon-wrapper">
+                  <svg class="about-me-svg" width="20" height="20">
+                    <use href="./images/icons.svg#icon-bx-downloadsvg"></use>
+                  </svg>
+                </div>
+              </button>
 
               <a
-                href="./files/Vitalii-Baranov-Zivotopis.pdf"
-                download
-                class="text"
-                >Download Resume</a
+                href="https://www.linkedin.com/in/vitalii-baranov-222439377/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="about-me-a"
               >
-              <div class="icon-wrapper">
-                <svg class="about-me-svg" width="20" height="20">
-                  <use href="./images/icons.svg#icon-bx-downloadsvg"></use>
+                <svg width="24" height="24" class="about-me-svg-link">
+                  <use href="./images/icons.svg#icon-linkendin"></use>
                 </svg>
-              </div>
-            </button>
-
-            <a
-              href="https://www.linkedin.com/in/vitalii-baranov-222439377/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              class="about-me-a"
-            >
-              <svg width="24" height="24" class="about-me-svg-link">
-                <use href="./images/icons.svg#icon-linkendin"></use>
-              </svg>
-            </a>
-            <a
-              href="https://github.com/ljresetl"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              class="about-me-a"
-            >
-              <svg width="24" height="24" class="about-me-svg-link">
-                <use href="./images/icons.svg#icon-github"></use>
-              </svg>
-            </a>
+              </a>
+              <a
+                href="https://github.com/ljresetl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                class="about-me-a"
+              >
+                <svg width="24" height="24" class="about-me-svg-link">
+                  <use href="./images/icons.svg#icon-github"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
       <section class="foto">
-        <div class="container">
+        <div class="container foto-container">
           <img
             srcset="./images/343.jpg 1x, ./images/686.jpg 2x"
             src="./images/343.jpg"
@@ -218,48 +214,85 @@
             alt="front-end"
             class="my-foto"
           />
+          <div class="about-me-text">
+            <h1 class="about-me-text-h">
+              Привіт! Я Віталій — Frontend розробник-початківець
+            </h1>
+            <p class="about-me-text-p">
+              Наразі я активно вивчаю JavaScript і проходжу курси на Fullstack
+              розробника, щоб стати професіоналом у веб-розробці.
+            </p>
+            <p class="about-me-text-p">
+              Маю міцні знання HTML та CSS, вмію створювати адаптивні і
+              привабливі інтерфейси, що працюють на різних пристроях.
+            </p>
+            <p class="about-me-text-p">
+              Працюю над проектами, щоб покращувати навички і освоювати нові
+              технології крок за кроком.
+            </p>
+            <p class="about-me-text-p">
+              Вірю, що постійне навчання і практика — це ключ до успіху у
+              IT-сфері.
+            </p>
+            <p class="about-me-text-p">
+              Я відкритий до нових викликів і готовий долучатися до цікавих
+              проектів, де зможу застосувати свої знання і продовжувати рости.
+            </p>
+            <p class="about-me-text-p">
+              Якщо шукаєш мотивованого і цілеспрямованого розробника, який
+              швидко вчиться — зв'яжись зі мною!
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="capabilities" class="capabilities">
         <div class="container capabilities-container">
           <h2 class="capabilities-h">My Capabilities</h2>
-          <p class="capabilities-p">
-            I am always looking to add more skills.Morbi egestas neque eu
-            blandit fermentum. Nulla ac lobortis ligula. Pellentesque ac ex at
-            purus faucibus tristique ut et dolor.
-          </p>
-          <ul class="capabilities-ul">
-            <li class="capabilities-li">HTML</li>
-            <li class="capabilities-li">CSS</li>
-            <li class="capabilities-li">Javascript</li>
-            <li class="capabilities-li">Figma</li>
-            <li class="capabilities-li">Vite</li>
-          </ul>
+          <div class="capabilities-right">
+            <p class="capabilities-p">
+              I am always looking to add more skills.Morbi egestas neque eu
+              blandit fermentum. Nulla ac lobortis ligula. Pellentesque ac ex at
+              purus faucibus tristique ut et dolor.
+            </p>
+            <ul class="capabilities-ul">
+              <li class="capabilities-li">HTML</li>
+              <li class="capabilities-li">CSS</li>
+              <li class="capabilities-li">Javascript</li>
+              <li class="capabilities-li">Figma</li>
+              <li class="capabilities-li">Vite</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section class="experience">
         <div class="container experience-section">
           <h3 class="experience-h">My Experience</h3>
-          <p class="experience-p">Freelance Developer</p>
-          <p class="experience-p experience-p-two">Nov 2024 — Present</p>
-          <p class="experience-p experience-p-two experience-p-two-two">
-            Я прагну забезпечувати ефективне виконання завдань, уникаючи зайвих
-            ускладнень. Маю на меті виконувати свої обов’язки відповідально,
-            дотримуючись високих стандартів якості та етики.
-          </p>
-          <p class="experience-p experience-p-three">Front-End Intern</p>
-          <p class="experience-p experience-p-four experience-p-four-four">
-            Nov 2024 — Present
-          </p>
-          <p class="experience-p experience-p-five">Roos Tech</p>
-          <p class="experience-p experience-p-two">
-            Я віддано працюю над тим, щоб забезпечити високу якість виконання
-            роботи та ефективно долати виклики. Ставлюся до відповідальності
-            серйозно та постійно дотримуюся високих стандартів професіоналізму й
-            чесності.
-          </p>
+          <div class="experience-right">
+            <div class="experience-right-top">
+              <p class="experience-p">Freelance Developer</p>
+              <p class="experience-p experience-p-two">Nov 2024 — Present</p>
+            </div>
+            <p class="experience-p experience-p-two experience-p-two-two">
+              Я прагну забезпечувати ефективне виконання завдань, уникаючи
+              зайвих ускладнень. Маю на меті виконувати свої обов’язки
+              відповідально, дотримуючись високих стандартів якості та етики.
+            </p>
+            <div class="experience-right-down">
+              <p class="experience-p experience-p-three">Front-End Intern</p>
+              <p class="experience-p experience-p-four experience-p-four-four">
+                Nov 2024 — Present
+              </p>
+            </div>
+            <p class="experience-p experience-p-five">Roos Tech</p>
+            <p class="experience-p experience-p-two">
+              Я віддано працюю над тим, щоб забезпечити високу якість виконання
+              роботи та ефективно долати виклики. Ставлюся до відповідальності
+              серйозно та постійно дотримуюся високих стандартів професіоналізму
+              й чесності.
+            </p>
+          </div>
         </div>
       </section>
 
