@@ -131,6 +131,14 @@ section {
   section {
     padding: 50px 0px;
   }
+
+  button:hover,
+  .about-me-a:hover,
+  a.button:hover,
+  .modal-button:hover {
+    transform: scale(1.025);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
 }
 /* хеадер початок */
 
@@ -317,6 +325,14 @@ section {
     width: 244px;
     height: 54px;
     font-size: 16px;
+  }
+
+  .about-me-svg-link {
+    transition: transform 0.25s ease;
+  }
+
+  .about-me-a:hover .about-me-svg-link {
+    transform: scale(1.15);
   }
 }
 
@@ -669,6 +685,14 @@ section {
 
   .project-list-p-opis {
     height: 100px;
+  }
+
+  .about-me-svg-link-connect {
+    transition: transform 0.25s ease;
+  }
+
+  .about-me-svg-link-connect:hover {
+    transform: scale(1.15);
   }
 }
 
