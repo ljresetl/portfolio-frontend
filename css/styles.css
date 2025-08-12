@@ -651,6 +651,16 @@ section {
   .container-section-four-ul-project {
     flex: 0 0 calc((100% / 3) - 20px); /* 3 в ряд, мінус половина гапу */
     box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .container-section-four-ul-project:hover {
+    background-color: #141414; /* трохи світліший */
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   }
 
   .img {
