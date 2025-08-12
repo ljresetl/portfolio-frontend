@@ -771,17 +771,23 @@
           <div class="connect-container-two">
             <form
               action="https://formspree.io/f/mzzggoog"
-              method="post"
+              method="POST"
               class="modal-form"
             >
-              <label class="modal-label" for="user-name">Name</label>
+              <input
+                type="hidden"
+                name="_subject"
+                value="Нове повідомлення з сайту"
+              />
+
+              <label class="modal-label" for="name">Name</label>
               <input
                 type="text"
-                name="user-name"
-                id="user-name"
+                name="name"
+                id="name"
                 class="modal-input"
                 required
-                placeholder="name"
+                placeholder="Your name"
               />
 
               <label class="modal-label" for="phone">Phone</label>
@@ -790,7 +796,7 @@
                 name="phone"
                 id="phone"
                 class="modal-input"
-                placeholder="telefon"
+                placeholder="+38 (0XX) XXX-XX-XX"
                 required
               />
 
@@ -801,15 +807,15 @@
                 id="email"
                 class="modal-input"
                 required
-                placeholder="email"
+                placeholder="your@email.com"
               />
 
-              <label class="modal-label" for="user-comment">Comment</label>
+              <label class="modal-label" for="message">Comment</label>
               <textarea
-                id="user-comment"
-                name="user-comment"
+                id="message"
+                name="message"
                 class="modal-textarea"
-                placeholder="Text input"
+                placeholder="Your message"
               ></textarea>
 
               <button type="submit" class="modal-button">Send</button>
