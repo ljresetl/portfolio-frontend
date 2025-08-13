@@ -31,11 +31,14 @@ menuLinks.forEach(link => {
   });
 });
 
-// очищення форми відправки початок
-document.addEventListener('contextmenu', function(event) {
-  event.preventDefault();
-});
 
+// блокування відкриття правою кнопкою миші
+// document.addEventListener('contextmenu', function(event) {
+//   event.preventDefault();
+// });
+
+
+// очищення форми відправки початок
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
 
