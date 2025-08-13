@@ -147,12 +147,21 @@ section {
   justify-content: space-between;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #1b1a1a;
+}
+
 .navigation {
   display: flex;
   flex-direction: row;
   gap: 5px;
   /* justify-content: space-between;
   gap: 100px; */
+  /* position: sticky;
+  top: 0; */
 }
 
 .header-ul {
