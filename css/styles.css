@@ -664,6 +664,21 @@ header {
   margin-bottom: 0px;
 }
 
+/* кнопка показати більше початок */
+.button-loadmore {
+  border-radius: 100px;
+  padding: 10px 20px;
+  width: 370px;
+  height: 44px;
+  background-color: #d3e97a;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+/* кнопка показати більше кінець */
+
 @media screen and (min-width: 1440px) {
   .portfolio-list {
     display: flex;
@@ -812,7 +827,7 @@ header {
   padding: 20px 40px;
   width: 140px;
   height: 54px;
-  background: #d3e97a;
+  background-color: #d3e97a;
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
