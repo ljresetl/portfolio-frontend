@@ -191,6 +191,42 @@ header {
   stroke: #c7c7c7;
 }
 
+/* кнопки переключення мов початок */
+.language-switcher {
+  display: flex;
+  gap: 6px;
+  margin-left: 10px;
+}
+
+.language-switcher-button {
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.language-switcher-button:hover,
+.language-switcher-button:focus {
+  background-color: #40b822;
+}
+
+/* Можна додати активну кнопку */
+.language-switcher-button.active {
+  background-color: #3a4b3d;
+}
+
+/* Адаптивність: великий екран */
+@media (min-width: 1440px) {
+  .language-switcher-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* кнопки переключення мов кінець */
+
 @media screen and (min-width: 1440px) {
   .header-ul {
     display: flex;
