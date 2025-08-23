@@ -874,6 +874,16 @@ header {
   color: #0a0a0a;
 }
 
+.goit {
+  color: #ff6600; /* яскравий колір тексту */
+  font-weight: bold; /* товстий шрифт */
+  background-color: #f0f0f0; /* легкий фон */
+  padding: 2px 6px; /* трохи простору навколо тексту */
+  border-radius: 4px; /* закруглені кути */
+  font-family: "Arial", sans-serif; /* можна змінити шрифт */
+  transition: all 0.3s ease; /* для плавного ефекту при наведенні */
+}
+
 @media screen and (min-width: 1440px) {
   .connect-container {
     flex-direction: row;

@@ -7,7 +7,7 @@ const translations = {
         navConnect: "Контакти",
         navAboutMe: "Про мене",
     navAboutMeP: "Я — фронтенд-розробник із Ліберця, Чехія. Маю технічну освіту у сфері комп’ютерних систем та спеціалізуюся на створенні сучасних вебінтерфейсів. Мої основні пріоритети — це якість коду, адаптивність і доступність для користувачів. Постійно працюю над вдосконаленням навичок і освоєнням нових інструментів.",
-    navAboutMeTwoP: "У своїй роботі я поєдную прагматичний підхід і креативність, адже вважаю, що кожен інтерфейс має бути не лише функціональним, а й приємним у використанні. З особливим інтересом досліджую JavaScript та сучасні фреймворки, щоб створювати ефективні рішення для складних завдань. Поза програмуванням надихаюся сім’єю та новими ідеями, які допомагають мені розвиватися як фахівцю й особистості.",
+    navAboutMeTwoP: "У своїй роботі я поєдную прагматичний підхід і креативність, адже вважаю, що кожен інтерфейс має бути не лише функціональним, а й приємним у використанні. З особливим інтересом досліджую JavaScript та сучасні фреймворки, щоб створювати ефективні рішення для складних завдань. Створюю односторінкові сайти, покращую UI/UX, працюю з HTML, CSS, JS, інтегрую зовнішні API. Поза програмуванням надихаюся сім’єю та новими ідеями, які допомагають мені розвиватися як фахівцю й особистості.",
         navButtonResume: "Завантажити резюме",
         navAboutTextH: "Привіт! Я Віталій — Frontend розробник-початківець",
     navAboutTextP: "Наразі я активно вивчаю JavaScript і проходжу курси на Fullstack розробника, щоб стати професіоналом у веб-розробці.",
@@ -28,7 +28,7 @@ const translations = {
     navExperiencePsix: "2024 — теперішній час",
     navExperiencePseven: "Самоосвіта",
     navExperiencePeight:
-            "Проходжу навчальні програми та онлайн-курси, які допомагають розвивати практичні навички створення адаптивних і доступних інтерфейсів. Регулярно практикуюся у написанні коду, реалізовую власні мініпроєкти та вдосконалюю вміння працювати з сучасними інструментами веброзробки.",
+            "Проходжу навчальні програми та онлайн-курси, які допомагають розвивати практичні навички створення адаптивних і доступних інтерфейсів. Регулярно практикуюся у написанні коду, реалізовую власні мініпроєкти та вдосконалюю вміння працювати з сучасними інструментами веброзробки. У 2024 році розпочав курси Fullstack розробки у компанії <a href='https://goit.ua' target='_blank' class='goit'>GoIT</a> і продовжую навчання до сьогодні.",
         navPortfolioH: "Приклади робіт",
     navPortfolioHtwo: "Фінансовий консалтинг",
     navPortfolioPone: "Опис: односторінковий адаптивний сайт для британської компанії з фінансового консалтингу. Містить опис послуг, переваги компанії, форму зворотного зв’язку, блог, інтерактивну карту.",
@@ -71,7 +71,7 @@ const translations = {
       navConnect: "Contacts",
         navAboutMe: "About Me",
     navAboutMeP: "I am a front-end developer based in Liberec, Czech Republic. I have a technical background in computer systems and specialize in building modern web interfaces. My main priorities are code quality, responsiveness, and accessibility for users. I am constantly improving my skills and exploring new tools.",
-    navAboutMeTwoP: "In my work, I combine a pragmatic approach with creativity, as I believe that every interface should be not only functional but also enjoyable to use. I am particularly interested in JavaScript and modern frameworks to create effective solutions for complex tasks. Outside of programming, I draw inspiration from my family and new ideas that help me grow both professionally and personally.",
+    navAboutMeTwoP: "In my work, I combine a pragmatic approach with creativity, as I believe that every interface should be not only functional but also enjoyable to use. I have a keen interest in exploring JavaScript and modern frameworks to create effective solutions for complex tasks. I build one-page websites, improve UI/UX, work with HTML, CSS, JS, and integrate external APIs. Outside of programming, I draw inspiration from my family and new ideas that help me grow both professionally and personally.",
       navButtonResume: "Download Resume",
         navAboutTextH: "Hi! I'm Vitalii — a junior Frontend Developer",
     navAboutTextP: "Currently, I am actively learning JavaScript and taking Fullstack development courses to become a professional in web development.",
@@ -91,9 +91,8 @@ const translations = {
     navExperiencePfour: "Courses and Online Learning",
     navExperiencePsix: "2024 — Present",
     navExperiencePseven: "Self-education",
-    navExperiencePeight:
-          "I am taking training programs and online courses that help me develop practical skills in creating adaptive and accessible interfaces. I regularly practice coding, implement my own mini-projects, and improve my ability to work with modern web development tools.",
-        navPortfolioH: "Portfolio",
+    navExperiencePeight: "I am taking training programs and online courses that help me develop practical skills in creating adaptive and accessible interfaces. I regularly practice coding, implement my own mini-projects, and improve my ability to work with modern web development tools. In 2024, I started Fullstack development courses at <a href='https://goit.ua' target='_blank' class='goit'>GoIT</a> and continue learning to this day.",
+    navPortfolioH: "Portfolio",
     navPortfolioHtwo: "Financial Consulting",
     navPortfolioPone: "Description: a one-page responsive website for a British financial consulting company. Includes service descriptions, company advantages, contact form, blog, interactive map.",
     navPortfolioT: "Technologies:",
@@ -135,7 +134,7 @@ const translations = {
       navConnect: "Kontakt",
         navAboutMe: "O mně",
     navAboutMeP: "Jsem front-end vývojář působící v Liberci, Česká republika. Mám technické vzdělání v oblasti počítačových systémů a specializuji se na tvorbu moderních webových rozhraní. Mými hlavními prioritami jsou kvalita kódu, responzivita a přístupnost pro uživatele. Neustále pracuji na zlepšování svých dovedností a objevování nových nástrojů.",
-    navAboutMeTwoP: "Ve své práci kombinuji pragmatický přístup s kreativitou, protože věřím, že každé rozhraní by mělo být nejen funkční, ale také příjemné k používání. Zvláštní zájem mám o JavaScript a moderní frameworky, které mi umožňují vytvářet efektivní řešení pro složité úkoly. Mimo programování čerpám inspiraci z rodiny a nových nápadů, které mi pomáhají růst jako profesionál i jako osobnost.",
+    navAboutMeTwoP: "Ve své práci kombinuji pragmatický přístup s kreativitou, protože věřím, že každé rozhraní by mělo být nejen funkční, ale také příjemné k používání. Zvláštní zájem mám o studium JavaScriptu a moderních frameworků, abych vytvářel efektivní řešení pro složité úkoly. Vytvářím jednostránkové weby, zlepšuji UI/UX, pracuji s HTML, CSS, JS a integruji externí API. Mimo programování se nechávám inspirovat rodinou a novými nápady, které mi pomáhají růst profesionálně i osobně.",
       navButtonResume: "Stáhnout životopis",
         navAboutTextH: "Ahoj! Jsem Vitalii — začínající Frontend vývojář",
     navAboutTextP: "Momentálně se aktivně učím JavaScript a absolvuji kurzy na Fullstack vývojáře, abych se stal profesionálem ve webovém vývoji.",
@@ -156,7 +155,7 @@ const translations = {
     navExperiencePsix: "2024 — současnost",
     navExperiencePseven: "Samostudium",
     navExperiencePeight:
-          "Absolvuji vzdělávací programy a online kurzy, které mi pomáhají rozvíjet praktické dovednosti při tvorbě responzivních a přístupných rozhraní. Pravidelně cvičím psaní kódu, realizuji vlastní miniprojekty a zlepšuji své schopnosti pracovat s moderními nástroji webového vývoje.",
+          "Absolvuji vzdělávací programy a online kurzy, které mi pomáhají rozvíjet praktické dovednosti při tvorbě adaptivních a přístupných rozhraní. Pravidelně si procvičuji psaní kódu, realizuji vlastní miniprojekty a zlepšuji své schopnosti pracovat s moderními nástroji webového vývoje. V roce 2024 jsem zahájil kurzy Fullstack vývoje ve společnosti <a href='https://goit.ua' target='_blank' class='goit'>GoIT</a> a pokračuji ve studiu dodnes.",
         navPortfolioH: "Portfolio",
     navPortfolioHtwo: "Finanční poradenství",
     navPortfolioPone: "Popis: jednorázová responzivní stránka pro britskou společnost poskytující finanční poradenství. Obsahuje popis služeb, výhody společnosti, kontaktní formulář, blog, interaktivní mapu.",
@@ -198,49 +197,28 @@ const translations = {
 function changeLanguage(lang) {
   if (!translations[lang]) return;
 
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
+    const translation = translations[lang][key];
+    if (translation) {
+      el.innerHTML = translation; // innerHTML дозволяє вставляти HTML
     }
   });
 
   localStorage.setItem("siteLang", lang);
 }
 
-// Обробка кнопок перемикання мови
+// Ініціалізація мови та обробка кнопок
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("siteLang") || "ua";
   changeLanguage(savedLang);
 
   document.querySelectorAll('.language-switcher button').forEach(btn => {
     btn.addEventListener('click', () => {
-      const lang = btn.getAttribute('data-lang'); // наприклад: <button data-lang="ua">
+      const lang = btn.dataset.lang; // коротше, ніж getAttribute
+      console.log('Перемикаю мову на:', lang);
       changeLanguage(lang);
     });
   });
 });
-
-document.querySelectorAll('.language-switcher button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const lang = btn.getAttribute('data-lang');
-    console.log('Перемикаю мову на:', lang);
-    changeLanguage(lang);
-  });
-});
-
-function changeLanguage(lang) {
-  console.log('Застосування мови:', lang);
-  if (!translations[lang]) return;
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    console.log('Ключ:', key, 'Переклад:', translations[lang][key]);
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-
-  localStorage.setItem("siteLang", lang);
-}
 
