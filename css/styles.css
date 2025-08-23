@@ -875,13 +875,13 @@ header {
 }
 
 .goit {
-  color: #ff6600; /* яскравий колір тексту */
-  font-weight: bold; /* товстий шрифт */
-  background-color: #f0f0f0; /* легкий фон */
-  padding: 2px 6px; /* трохи простору навколо тексту */
-  border-radius: 4px; /* закруглені кути */
-  font-family: "Arial", sans-serif; /* можна змінити шрифт */
-  transition: all 0.3s ease; /* для плавного ефекту при наведенні */
+  color: #ff6600;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Arial", sans-serif;
+  transition: all 0.3s ease;
 }
 
 @media screen and (min-width: 1440px) {
