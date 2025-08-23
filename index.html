@@ -31,12 +31,27 @@
         <nav class="navigation" aria-label="Головне меню">
           <p class="logo">FrontEnd</p>
           <ul class="header-ul">
-            <li class="header-li"><a href="#about">About Me</a></li>
-            <li class="header-li"><a href="#capabilities">Capabilities</a></li>
-            <li class="header-li"><a href="#portfolio">Portfolio</a></li>
-            <li class="header-li"><a href="#connect">Connect</a></li>
+            <li class="header-li">
+              <a href="#about" data-i18n="navAbout">Про мене</a>
+            </li>
+            <li class="header-li">
+              <a href="#capabilities" data-i18n="navCapabilities">Досвід</a>
+            </li>
+            <li class="header-li">
+              <a href="#portfolio" data-i18n="navPortfolio">Портфоліо</a>
+            </li>
+            <li class="header-li">
+              <a href="#connect" data-i18n="navConnect">Контакти</a>
+            </li>
           </ul>
         </nav>
+        <!-- кнопки переключення мови початок -->
+        <div class="language-switcher">
+          <button type="button" data-lang="ua">Українська</button>
+          <button type="button" data-lang="en">English</button>
+          <button type="button" data-lang="cz">Čeština</button>
+        </div>
+        <!-- кнопки переключення мови кінець -->
         <!-- Бургер-меню початок -->
         <button class="burger-menu" type="button">
           <svg class="burger-menu-icon" width="44" height="44">
@@ -67,16 +82,35 @@
               <li>
                 <a href="index.html" class="mobile-menu-link">FrontEnd</a>
               </li>
-              <li><a href="#aboutme" class="menu-link">About Me</a></li>
               <li>
-                <a href="#capabilities" class="mobile-menu-link"
-                  >Capabilities</a
+                <a href="#aboutme" class="menu-link" data-i18n="navAbout"
+                  >Про мене</a
                 >
               </li>
               <li>
-                <a href="#portfolio" class="mobile-menu-link">Portfolio</a>
+                <a
+                  href="#capabilities"
+                  class="mobile-menu-link"
+                  data-i18n="navCapabilities"
+                  >Досвід</a
+                >
               </li>
-              <li><a href="#connect" class="mobile-menu-link">Connect</a></li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="mobile-menu-link"
+                  data-i18n="navPortfolio"
+                  >Портфоліо</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#connect"
+                  class="mobile-menu-link"
+                  data-i18n="navConnect"
+                  >Контакти</a
+                >
+              </li>
             </ul>
 
             <!-- Ось тут вставка -->
@@ -143,25 +177,29 @@
       </div>
       <!-- Підключення JS -->
       <script src="./script.js" defer></script>
+      <script src="./translation.js" defer></script>
     </header>
 
     <main>
       <section id="aboutme" class="about-me">
         <div class="container about-me-container" id="resume">
-          <h1 class="about-me-h">About Me</h1>
+          <h1 class="about-me-h" data-i18n="navAboutMe">About Me</h1>
           <div class="about-me-right">
-            <p class="about-me-p">
-              I am a front-end developer based in Liberec, Czech Republic. I
-              have an educational background in computer systems engineering.
+            <p class="about-me-p" data-i18n="navAboutMeP">
+              Я — фронтенд-розробник із Ліберця, Чехія. Маю технічну освіту у
+              сфері комп’ютерних систем та спеціалізуюся на створенні сучасних
+              вебінтерфейсів. Мої основні пріоритети — це якість коду,
+              адаптивність і доступність для користувачів. Постійно працюю над
+              вдосконаленням навичок і освоєнням нових інструментів.
             </p>
-            <p class="about-me-p about-me-p-two">
-              I am a front-end developer based in Liberec, Czech Republic,
-              looking for exciting opportunities. I have an educational
-              background in computer systems. I like to focus on accessibility
-              when developing. I am passionate and curious about solving
-              problems. Currently, I am learning JavaScript. When I’m not
-              programming, I enjoy spending time with my family. I am constantly
-              learning to improve my skills.
+            <p class="about-me-p about-me-p-two" data-i18n="navAboutMeTwoP">
+              У своїй роботі я поєдную прагматичний підхід і креативність, адже
+              вважаю, що кожен інтерфейс має бути не лише функціональним, а й
+              приємним у використанні. З особливим інтересом досліджую
+              JavaScript та сучасні фреймворки, щоб створювати ефективні рішення
+              для складних завдань. Поза програмуванням надихаюся сім’єю та
+              новими ідеями, які допомагають мені розвиватися як фахівцю й
+              особистості.
             </p>
             <div class="button-a-a">
               <button type="button" class="about-me-button">
@@ -169,7 +207,8 @@
                   href="./files/Vitalii-Baranov-Zivotopis.pdf"
                   download
                   class="text"
-                  >Download Resume</a
+                  data-i18n="navButtonResume"
+                  >Завантажити резюме</a
                 >
                 <div class="icon-wrapper">
                   <svg class="about-me-svg" width="20" height="20">
@@ -215,30 +254,30 @@
             class="my-foto"
           />
           <div class="about-me-text">
-            <h1 class="about-me-text-h">
+            <h1 class="about-me-text-h" data-i18n="navAboutTextH">
               Привіт! Я Віталій — Frontend розробник-початківець
             </h1>
-            <p class="about-me-text-p">
+            <p class="about-me-text-p" data-i18n="navAboutTextP">
               Наразі я активно вивчаю JavaScript і проходжу курси на Fullstack
               розробника, щоб стати професіоналом у веб-розробці.
             </p>
-            <p class="about-me-text-p">
+            <p class="about-me-text-p" data-i18n="navAboutTextPtwo">
               Маю міцні знання HTML та CSS, вмію створювати адаптивні і
               привабливі інтерфейси, що працюють на різних пристроях.
             </p>
-            <p class="about-me-text-p">
+            <p class="about-me-text-p" data-i18n="navAboutTextPthree">
               Працюю над проектами, щоб покращувати навички і освоювати нові
               технології крок за кроком.
             </p>
-            <p class="about-me-text-p">
+            <p class="about-me-text-p" data-i18n="navAboutTextPfour">
               Вірю, що постійне навчання і практика — це ключ до успіху у
               IT-сфері.
             </p>
-            <p class="about-me-text-p">
+            <p class="about-me-text-p" data-i18n="navAboutTextPfive">
               Я відкритий до нових викликів і готовий долучатися до цікавих
               проектів, де зможу застосувати свої знання і продовжувати рости.
             </p>
-            <p class="about-me-text-p">
+            <p class="about-me-text-p" data-i18n="navAboutTextPsix">
               Якщо шукаєш мотивованого і цілеспрямованого розробника, який
               швидко вчиться — зв'яжись зі мною!
             </p>
@@ -248,9 +287,11 @@
 
       <section id="capabilities" class="capabilities">
         <div class="container capabilities-container">
-          <h2 class="capabilities-h">My Capabilities</h2>
+          <h2 class="capabilities-h" data-i18n="navCapabilitiesH">
+            Мої навички
+          </h2>
           <div class="capabilities-right">
-            <p class="capabilities-p">
+            <p class="capabilities-p" data-i18n="navCapabilitiesP">
               Розвиваюся щодня, щоб бути в курсі сучасних технологій і трендів у
               веб-розробці. Вірю, що наполегливість і постійне навчання
               допоможуть мені досягти нових вершин у кар'єрі. Готовий братися за
@@ -269,29 +310,58 @@
 
       <section class="experience">
         <div class="container experience-section">
-          <h3 class="experience-h">My Experience</h3>
+          <h3 class="experience-h" data-i18n="navExperienceH">Мій досвід</h3>
           <div class="experience-right">
             <div class="experience-right-top">
-              <p class="experience-p">Freelance Developer</p>
-              <p class="experience-p experience-p-two">Nov 2024 — Present</p>
-            </div>
-            <p class="experience-p experience-p-two experience-p-two-two">
-              Я прагну забезпечувати ефективне виконання завдань, уникаючи
-              зайвих ускладнень. Маю на меті виконувати свої обов’язки
-              відповідально, дотримуючись високих стандартів якості та етики.
-            </p>
-            <div class="experience-right-down">
-              <p class="experience-p experience-p-three">Front-End Intern</p>
-              <p class="experience-p experience-p-four experience-p-four-four">
-                Nov 2024 — Present
+              <p class="experience-p" data-i18n="navExperienceP">
+                Самостійне навчання та практичні проєкти
+              </p>
+              <p
+                class="experience-p experience-p-two"
+                data-i18n="navExperiencePtwo"
+              >
+                2024 — теперішній час
               </p>
             </div>
-            <p class="experience-p experience-p-five">Roos Tech</p>
-            <p class="experience-p experience-p-two">
-              Я віддано працюю над тим, щоб забезпечити високу якість виконання
-              роботи та ефективно долати виклики. Ставлюся до відповідальності
-              серйозно та постійно дотримуюся високих стандартів професіоналізму
-              й чесності.
+            <p
+              class="experience-p experience-p-two experience-p-two-two"
+              data-i18n="navExperiencePthree"
+            >
+              Активно вивчаю фронтенд-розробку, працюю над навчальними й
+              особистими проєктами для закріплення знань на практиці. Опановую
+              сучасні технології (HTML, CSS, JavaScript) та поступово розширюю
+              компетенції у сфері веброзробки. Приклади моїх проектів можна
+              побачити нижче.
+            </p>
+            <div class="experience-right-down">
+              <p
+                class="experience-p experience-p-three"
+                data-i18n="navExperiencePfour"
+              >
+                Курси та онлайн-навчання
+              </p>
+              <p
+                class="experience-p experience-p-four experience-p-four-four"
+                data-i18n="navExperiencePsix"
+              >
+                2024 — теперішній час
+              </p>
+            </div>
+            <p
+              class="experience-p experience-p-five"
+              data-i18n="navExperiencePseven"
+            >
+              Самоосвіта
+            </p>
+            <p
+              class="experience-p experience-p-two"
+              data-i18n="navExperiencePeight"
+            >
+              Проходжу навчальні програми та онлайн-курси, які допомагають
+              розвивати практичні навички створення адаптивних і доступних
+              інтерфейсів. Регулярно практикуюся у написанні коду, реалізовую
+              власні мініпроєкти та вдосконалюю вміння працювати з сучасними
+              інструментами веброзробки.
             </p>
           </div>
         </div>
@@ -299,12 +369,16 @@
 
       <section id="portfolio" class="portfolio">
         <div class="container portfolio-container">
-          <h3 class="portfolio-container-h">Examples</h3>
+          <h3 class="portfolio-container-h" data-i18n="navPortfolioH">
+            Приклади робіт
+          </h3>
           <div class="portfolio-list">
             <!-- прикла 1 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">Financial Consulting</h3>
-              <p class="project-list-p-opis">
+              <h3 class="project-list-h3" data-i18n="navPortfolioHtwo">
+                Фінансовий консалтинг
+              </h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPone">
                 Опис: односторінковий адаптивний сайт для британської компанії з
                 фінансового консалтингу. Містить опис послуг, переваги компанії,
                 форму зворотного зв’язку, блог, інтерактивну карту.
@@ -319,16 +393,27 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні + mobile-first;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано + mobile-first;
                   </li>
-                  <li class="container-section-four-li">
-                    CSS - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
+                    CSS - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioJS"
+                  >
                     JavaScript - частково;
                   </li>
                   <li class="container-section-four-li">
@@ -337,6 +422,7 @@
                       href="https://github.com/ljresetl/financial_consulting"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-i18n="navPortfolioA"
                     >
                       <svg
                         width="32"
@@ -358,8 +444,9 @@
                       href="https://ljresetl.github.io/financial_consulting/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-i18n="navPortfolioW"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -368,8 +455,8 @@
             <!-- прикла 1 кінець -->
             <!-- прикла 2 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">Kino</h3>
-              <p class="project-list-p-opis">
+              <h3 class="project-list-h3" data-i18n="navPortfolioH">Кіно</h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPtwo">
                 Опис: односторінковий сайт, що надає користувачам можливість
                 переглядати фільми та серіали українською мовою. Інтерфейс сайту
                 простий і зручний, з адаптивним дизайном, що дозволяє комфортно
@@ -385,16 +472,27 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні + mobile-first;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано + mobile-first;
                   </li>
-                  <li class="container-section-four-li">
-                    CSS - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
+                    CSS - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioJS"
+                  >
                     JavaScript - частково;
                   </li>
                   <li class="container-section-four-li">
@@ -403,6 +501,7 @@
                       href="https://github.com/ljresetl/kino2"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-i18n="navPortfolioA"
                     >
                       <svg
                         width="32"
@@ -421,11 +520,12 @@
                   </li>
                   <li class="container-section-four-li site">
                     <a
+                      data-i18n="navPortfolioW"
                       href="https://ljresetl.github.io/kino2/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -434,8 +534,10 @@
             <!-- приклад 2 кінець -->
             <!-- приклад 3 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">Barbershop</h3>
-              <p class="project-list-p-opis">
+              <h3 class="project-list-h3" data-i18n="navPortfolioHthree">
+                Барбершоп
+              </h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPthree">
                 Опис: односторінковий адаптивний сайт для чоловічої перукарні в
                 Києві. Він поєднує стильний дизайн із зручним функціоналом для
                 онлайн-запису.
@@ -450,20 +552,32 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні + mobile-first;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано + mobile-first;
                   </li>
-                  <li class="container-section-four-li">
-                    CSS - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
+                    CSS - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioJS"
+                  >
                     JavaScript - частково;
                   </li>
                   <li class="container-section-four-li">
                     <a
+                      data-i18n="navPortfolioA"
                       class="container-section-four-a"
                       href="https://github.com/ljresetl/barbershop"
                       target="_blank"
@@ -489,8 +603,9 @@
                       href="https://ljresetl.github.io/barbershop/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-i18n="navPortfolioW"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -499,8 +614,10 @@
             <!-- приклад 3 кінець -->
             <!-- приклад 4 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">PRODUCT-business</h3>
-              <p class="project-list-p-opis">
+              <h3 class="project-list-h3" data-i18n="navPortfolioHfour">
+                Продукт для бізнесу
+              </h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPfour">
                 Опис: односторінковий сайт, який демонструє можливості платформи
                 для тестування та валідації продуктів. Сайт орієнтований на
                 стартапи та компанії, які прагнуть оптимізувати свої продукти
@@ -516,20 +633,32 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні + mobile-first;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано + mobile-first;
                   </li>
-                  <li class="container-section-four-li">
-                    CSS - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
+                    CSS - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioJS"
+                  >
                     JavaScript - частково;
                   </li>
                   <li class="container-section-four-li">
                     <a
+                      data-i18n="navPortfolioA"
                       class="container-section-four-a"
                       href="https://github.com/ljresetl/PRODUCT-business"
                       target="_blank"
@@ -555,8 +684,9 @@
                       href="https://ljresetl.github.io/PRODUCT-business/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-i18n="navPortfolioW"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -565,8 +695,10 @@
             <!-- приклад 4 кінець -->
             <!-- приклад 5 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">Web Studio</h3>
-              <p class="project-list-p-opis">
+              <h3 class="project-list-h3" data-i18n="navPortfolioHfive">
+                Вебстудія
+              </h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPfive">
                 Опис: односторінковий адаптивний сайт, створений у рамках
                 домашнього завдання №6 курсу GoIT. Сайт демонструє можливості
                 веб-студії, що спеціалізується на цифровому дизайні та
@@ -582,20 +714,35 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні + mobile-first;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано + mobile-first;
                   </li>
-                  <li class="container-section-four-li">
-                    CSS - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
+                    CSS - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioJS"
+                  >
                     JavaScript - частково;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioR"
+                  >
                     <a
+                      data-i18n="navPortfolioA"
                       class="container-section-four-a"
                       href="https://github.com/ljresetl/goit-markup-hw-06"
                       target="_blank"
@@ -618,11 +765,12 @@
                   </li>
                   <li class="container-section-four-li site">
                     <a
+                      data-i18n="navPortfolioW"
                       href="https://ljresetl.github.io/goit-markup-hw-06/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -631,8 +779,8 @@
             <!-- приклад 5 кінець -->
             <!-- приклад 6 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">YachtJet</h3>
-              <p class="project-list-p-opis">
+              <h3 class="project-list-h3" data-i18n="navPortfolioHsix">Яхти</h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPsix">
                 Опис: односторінковий сайт, розроблений у рамках командного
                 проєкту, що демонструє можливості оренди розкішних яхт для
                 подорожей. Сайт поєднує елегантний дизайн із зручним
@@ -648,20 +796,32 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні + mobile-first;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано + mobile-first;
                   </li>
-                  <li class="container-section-four-li">
-                    CSS - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
+                    CSS - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioR"
+                  >
                     JavaScript - частково;
                   </li>
                   <li class="container-section-four-li">
                     <a
+                      data-i18n="navPortfolioA"
                       class="container-section-four-a"
                       href="https://github.com/ljresetl/team-work-yachtjet"
                       target="_blank"
@@ -684,11 +844,12 @@
                   </li>
                   <li class="container-section-four-li site">
                     <a
+                      data-i18n="navPortfolioW"
                       href="https://ljresetl.github.io/team-work-yachtjet/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -697,10 +858,12 @@
             <!-- приклад 6 кінець -->
             <!-- приклад 7 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">Weatger App</h3>
-              <p class="project-list-p-opis">
-                Опис: Weather Forecast App – веб-додаток для перегляду прогнозу
-                погоди в обраних містах. Підтримує погодинний та денний прогноз,
+              <h3 class="project-list-h3" data-i18n="navPortfolioHseven">
+                Сайт погоди
+              </h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPseven">
+                Опис: Сайт погоди – веб-додаток для перегляду прогнозу погоди в
+                обраних містах. Підтримує погодинний та денний прогноз,
                 автодоповнення при введенні міста та кілька мов (чеська,
                 українська, англійська).
               </p>
@@ -714,20 +877,32 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні + mobile-first;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано + mobile-first;
                   </li>
-                  <li class="container-section-four-li">
-                    CSS - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
+                    CSS - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioJS"
+                  >
                     JavaScript - можна ще щось додати за бажанням;
                   </li>
                   <li class="container-section-four-li">
                     <a
+                      data-i18n="navPortfolioA"
                       class="container-section-four-a"
                       href="https://github.com/ljresetl/weather-html-css-js"
                       target="_blank"
@@ -750,11 +925,12 @@
                   </li>
                   <li class="container-section-four-li site">
                     <a
+                      data-i18n="navPortfolioW"
                       href="https://ljresetl.github.io/weather-html-css-js/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -763,8 +939,10 @@
             <!-- приклад 7 кінець -->
             <!-- прикла 8 початок -->
             <div class="container-section-four-ul-project">
-              <h3 class="project-list-h3">SWES Reservation Module</h3>
-              <p class="project-list-p-opis">
+              <h3 class="project-list-h3" data-i18n="navPortfolioHeight">
+                SWES Reservation Module
+              </h3>
+              <p class="project-list-p-opis" data-i18n="navPortfolioPeight">
                 Опис: Інтерфейс для бронювання та управління обладнанням у
                 компанії. Користувачі можуть створювати бронювання, переглядати
                 історію, фільтрувати за типом та статусом, а також переглядати
@@ -780,20 +958,32 @@
                   class="img"
                 />
               </div>
-              <p class="container-section-four-p">Технології:</p>
+              <p class="container-section-four-p" data-i18n="navPortfolioT">
+                Технології:
+              </p>
               <div>
                 <ul class="container-section-four-ul">
-                  <li class="container-section-four-li">
-                    HTML - Зроблено на високому рівні;
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioHTML"
+                  >
+                    HTML - Використано;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioCSS"
+                  >
                     CSS - Bootstrap — популярний фреймворк;
                   </li>
-                  <li class="container-section-four-li">
+                  <li
+                    class="container-section-four-li"
+                    data-i18n="navPortfolioJS"
+                  >
                     JavaScript - в цілому все що потрібно;
                   </li>
                   <li class="container-section-four-li">
                     <a
+                      data-i18n="navPortfolioA"
                       class="container-section-four-a"
                       href="https://github.com/ljresetl/SWES-Reservation-Module"
                       target="_blank"
@@ -819,8 +1009,9 @@
                       href="https://ljresetl.github.io/SWES-Reservation-Module/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-i18n="navPortfolioW"
                     >
-                      Website
+                      Вебсайт
                     </a>
                   </li>
                 </ul>
@@ -830,7 +1021,12 @@
           </div>
           <!-- Кнопка показати більше початок -->
           <div>
-            <button type="button" class="button-loadmore" id="loadMore">
+            <button
+              type="button"
+              class="button-loadmore"
+              id="loadMore"
+              data-i18n="navPortfolioLoadMore"
+            >
               Показати більше
             </button>
           </div>
@@ -843,18 +1039,32 @@
       <section id="connect" class="connect">
         <div class="container connect-container">
           <div class="connect-container-one">
-            <h3 class="connect-container-one-h">Let’s connect</h3>
+            <h3 class="connect-container-one-h" data-i18n="navСonnect">
+              Зв'язок
+            </h3>
+
+            <!-- Перший параграф -->
             <p class="connect-container-one-p">
-              Say hello at
+              <span data-i18n="navСonnectP">Скажи привіт тут</span>
               <a href="mailto:ljresetl@gmail.com" class="connect-span-a"
                 >ljresetl@gmail.com</a
               >
             </p>
+
+            <!-- Другий параграф -->
             <p class="connect-container-one-p">
-              For more info, here’s my
-              <a class="connect-span-resume" href="#resume">resume</a>
+              <span data-i18n="navСonnectPtwo"
+                >Для більшої інформації ось моє</span
+              >
+              <a
+                data-i18n="navСonnectR"
+                class="connect-span-resume"
+                href="#resume"
+                >Резюме</a
+              >
             </p>
 
+            <!-- Соцмережі -->
             <div class="connect-svg">
               <a
                 href="https://www.linkedin.com/in/vitalii-baranov-222439377/"
@@ -910,6 +1120,7 @@
               </a>
             </div>
           </div>
+
           <div class="connect-container-two">
             <form
               action="https://formspree.io/f/mzzggoog"
@@ -923,7 +1134,9 @@
                 value="Нове повідомлення з сайту"
               />
 
-              <label class="modal-label" for="name">Name</label>
+              <label class="modal-label" for="name" data-i18n="navСonnectName"
+                >І'мя</label
+              >
               <input
                 type="text"
                 name="name"
@@ -933,7 +1146,12 @@
                 placeholder="Your name"
               />
 
-              <label class="modal-label" for="phone">Phone</label>
+              <label
+                class="modal-label"
+                for="phone"
+                data-i18n="navСonnectTelefon"
+                >Телефон</label
+              >
               <input
                 type="tel"
                 name="phone"
@@ -943,7 +1161,9 @@
                 required
               />
 
-              <label class="modal-label" for="email">Email</label>
+              <label class="modal-label" for="email" data-i18n="navСonnectMail"
+                >Емейл</label
+              >
               <input
                 type="email"
                 name="email"
@@ -953,7 +1173,12 @@
                 placeholder="your@email.com"
               />
 
-              <label class="modal-label" for="message">Comment</label>
+              <label
+                class="modal-label"
+                for="message"
+                data-i18n="navСonnectComment"
+                >Коментар</label
+              >
               <textarea
                 id="message"
                 name="message"
@@ -961,7 +1186,13 @@
                 placeholder="Your message"
               ></textarea>
 
-              <button type="submit" class="modal-button">Send</button>
+              <button
+                type="submit"
+                class="modal-button"
+                data-i18n="navСonnectButtonSend"
+              >
+                Послати
+              </button>
             </form>
           </div>
         </div>
