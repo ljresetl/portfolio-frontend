@@ -198,6 +198,13 @@ header {
   margin-left: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .language-switcher {
+    margin-left: 300px;
+    align-items: flex-end;
+  }
+}
+
 .language-switcher-button {
   background-color: #28a745;
   color: #fff;
@@ -228,6 +235,11 @@ header {
   .language-switcher-button {
     padding: 10px 20px;
     font-size: 16px;
+  }
+
+  .language-switcher {
+    margin-left: 20px;
+    align-items: flex-end;
   }
 }
 
