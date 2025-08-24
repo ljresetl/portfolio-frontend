@@ -328,6 +328,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 
 .about-me-svg-link {
@@ -791,6 +792,8 @@ header {
 
 .connect-svg {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 32px;
   margin-top: 32px;
 }
