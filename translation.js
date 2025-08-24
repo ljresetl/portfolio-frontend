@@ -41,7 +41,7 @@ const translations = {
 
     navPortfolioPtwo: "Опис: односторінковий сайт, що надає користувачам можливість переглядати фільми та серіали українською мовою. Інтерфейс сайту простий і зручний, з адаптивним дизайном, що дозволяє комфортно переглядати контент на різних пристроях.",
     navPortfolioHthree: "Барбершоп",
-    navPortfolioPthree: "Опис: односторінковий адаптивний сайт для чоловічої перукарні в Києві. Він поєднує стильний дизайн із зручним функціоналом для онлайн-запису.",
+    navPortfolioPthree: "Опис: односторінковий адаптивний сайт для чоловічої перукарні в Києві. Він поєднує стильний дизайн із зручним функціоналом для онлайн-запису та швидкого перегляду послуг.",
     navPortfolioHfour: "Продукт для бізнесу",
     navPortfolioPfour: "Опис: односторінковий сайт, який демонструє можливості платформи для тестування та валідації продуктів. Сайт орієнтований на стартапи та компанії, які прагнуть оптимізувати свої продукти через зворотний зв'язок від користувачів.",
     navPortfolioHfive: "Вебстудія",
@@ -104,7 +104,7 @@ const translations = {
 
     navPortfolioPtwo: "Description: a one-page website that allows users to watch movies and series in Ukrainian. The interface is simple and convenient, with responsive design for comfortable viewing on any device.",
     navPortfolioHthree: "Barbershop",
-    navPortfolioPthree: "Description: a one-page responsive website for a men's barbershop in Kyiv. Combines stylish design with convenient online booking functionality.",
+    navPortfolioPthree: "Description: A single-page responsive website for a men's barbershop in Kyiv. It combines a stylish design with convenient functionality for online booking and quick service overview.",
     navPortfolioHfour: "Product for Business",
     navPortfolioPfour: "Description: a one-page website showcasing a platform for testing and validating products. Targeted at startups and companies looking to optimize products through user feedback.",
     navPortfolioHfive: "Web Studio",
@@ -168,7 +168,7 @@ const translations = {
 
     navPortfolioPtwo: "Popis: jednorázová stránka, která umožňuje uživatelům sledovat filmy a seriály v ukrajinštině. Rozhraní je jednoduché a pohodlné, s responzivním designem pro pohodlné prohlížení na různých zařízeních.",
     navPortfolioHthree: "Barbershop",
-    navPortfolioPthree: "Popis: jednorázová responzivní stránka pro pánský kadeřnický salon v Kyjevě. Kombinuje stylový design s pohodlnou funkcionalitou online rezervace.",
+    navPortfolioPthree: "Popis: Jednostránková responzivní webová stránka pro pánský kadeřnický salon v Kyjevě. Spojuje stylový design s pohodlnou funkcionalitou pro online rezervace a rychlý přehled služeb.",
     navPortfolioHfour: "Produkt pro podnikání",
     navPortfolioPfour: "Popis: jednorázová stránka, která ukazuje možnosti platformy pro testování a validaci produktů. Stránka je zaměřena na startupy a firmy, které chtějí optimalizovat své produkty prostřednictvím zpětné vazby uživatelů.",
     navPortfolioHfive: "Web Studio",
