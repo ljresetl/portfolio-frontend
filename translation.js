@@ -62,7 +62,11 @@ const translations = {
     navСonnectTelefon: "Телефон",
     navСonnectMail: "Емейл",
     navСonnectComment: "Коментар",
-    navСonnectButtonSend: "Послати"
+    navСonnectButtonSend: "Послати",
+    navPortfolioHtwoV: "Музичне портфоліо",
+    navPortfolioPoneV: "Опис: Адаптивний односторінковий сайт для музичного виконавця, що презентує його нові сингли та майбутній альбом. Вебсайт включає інтегрований аудіоплеєр.",
+navPortfolioHTMLV: "HTML - Використано тільки дескопт версія"
+
   },
   en: {
     navAbout: "About Me",
@@ -125,7 +129,11 @@ const translations = {
     navСonnectTelefon: "Phone",
     navСonnectMail: "Email",
     navСonnectComment: "Message",
-    navСonnectButtonSend: "Send"
+    navСonnectButtonSend: "Send",
+    navPortfolioHtwoV: "Music portfolio",
+    navPortfolioPoneV: "Description: A responsive one-page website for a music artist showcasing new singles and an upcoming album. The website includes an integrated audio player.",
+    navPortfolioHTMLV: "HTML - Desktop version only"
+
   },
   cz: {
     navAbout: "O mně",
@@ -189,7 +197,11 @@ const translations = {
     navСonnectTelefon: "Telefon",
     navСonnectMail: "E-mail",
     navСonnectComment: "Komentář",
-    navСonnectButtonSend: "Odeslat"
+    navСonnectButtonSend: "Odeslat",
+    navPortfolioHtwoV: "Hudební portfolio",
+    navPortfolioPoneV: "Popis: Responzivní jednostránková webová stránka pro hudebního umělce, prezentující nové singly a připravované album. Web obsahuje integrovaný audio přehrávač.",
+    navPortfolioHTMLV: "HTML - Pouze verze pro desktop"
+
   }
 };
 
