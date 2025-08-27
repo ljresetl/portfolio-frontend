@@ -1,73 +1,49 @@
-👨‍💻 Про мене
+About Me
 
-Я — фронтенд-розробник із Ліберця, Чехія, з технічною освітою у сфері комп’ютерних систем. Спеціалізуюсь на створенні сучасних вебінтерфейсів, орієнтуюсь на якість коду, адаптивність та доступність. Постійно вдосконалюю свої навички, освоюючи нові інструменти та технології.
+I am a Frontend Developer from Liberec, Czech Republic, with a technical education in computer systems. I specialize in creating modern web interfaces, focusing on code quality, responsiveness, and accessibility. I continuously improve my skills by learning new tools and technologies.
 
-🛠️ Навички
+🛠️ Skills
 
 HTML5, CSS3, JavaScript
-
 Figma, Vite
+Responsive design, mobile-first approach
+API integration
 
-Адаптивний дизайн, mobile-first підхід
+🎓 Experience
 
-Інтеграція з API
+2024 — Present: Self-learning and practical projects
+2024 — Present: Fullstack development courses at GoIT
 
-🎓 Досвід
+📁 Projects
 
-2024 — теперішній час: Самостійне навчання та практичні проєкти
+💼 Financial Consulting
+Description: A one-page responsive website for a UK-based financial consulting company.
+Technologies: HTML, CSS, JavaScript
+Links: GitHub, Website
 
-2024 — теперішній час: Курси Fullstack розробки у компанії GoIT
+🎬 Cinema
+Description: A website for watching movies and TV series in Ukrainian.
+Technologies: HTML, CSS, JavaScript
+Links: GitHub, Website
 
-📁 Проєкти
-💼 Фінансовий консалтинг
+💈 Barbershop
+Description: A website for a men’s barbershop in Kyiv with online booking.
+Technologies: HTML, CSS, JavaScript
+Links: GitHub, Website
 
-Опис: Односторінковий адаптивний сайт для британської компанії з фінансового консалтингу.
+📦 Business Product
+Description: A website for testing and validating products for startups.
+Technologies: HTML, CSS, JavaScript
+Links: GitHub, Website
 
-Технології: HTML, CSS, JavaScript
+🖥️ Web Studio
+Description: A website for a web studio specializing in digital design and marketing solutions.
+Technologies: HTML, CSS
+Links: GitHub, Website
 
-Посилання: GitHub
-, Вебсайт
+📬 Contacts
 
-🎬 Кіно
-
-Опис: Сайт для перегляду фільмів та серіалів українською мовою.
-
-Технології: HTML, CSS, JavaScript
-
-Посилання: GitHub
-, Вебсайт
-
-💈 Барбершоп
-
-Опис: Сайт для чоловічої перукарні в Києві з онлайн-записом.
-
-Технології: HTML, CSS, JavaScript
-
-Посилання: GitHub
-, Вебсайт
-
-📦 Продукт для бізнесу
-
-Опис: Сайт для тестування та валідації продуктів для стартапів.
-
-Технології: HTML, CSS, JavaScript
-
-Посилання: GitHub
-, Вебсайт
-
-🖥️ Вебстудія
-
-Опис: Сайт для веб-студії, що спеціалізується на цифровому дизайні та маркетингових рішеннях.
-
-Технології: HTML, CSS
-
-Посилання: GitHub
-, Вебсайт
-
-📬 Контакти
-
-Усі контакти та посилання на соціальні мережі доступні безпосередньо на сайті:
-
+All contacts and social media links are available directly on the website:
 LinkedIn, GitHub, Twitter, Instagram
 
-Форма зворотного зв’язку на сайті для швидкого зв’язку
+A contact form on the website allows quick communication.
