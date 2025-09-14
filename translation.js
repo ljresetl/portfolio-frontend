@@ -65,10 +65,15 @@ const translations = {
     navСonnectButtonSend: "Послати",
     navPortfolioHtwoV: "Музичне портфоліо",
     navPortfolioPoneV: "Опис: Адаптивний односторінковий сайт для музичного виконавця, що презентує його нові сингли та майбутній альбом. Вебсайт включає інтегрований аудіоплеєр.",
-navPortfolioHTMLV: "HTML - Використано тільки дескопт версія"
+    navPortfolioHTMLV: "HTML - Використано тільки дескопт версія",
+    navPortfolioJSQQ: "JavaScript - Використано;",
+navPortfolioPoneVQQ:"Опис: каталог музичних виконавців, їхніх пісень, біографій та відгуків."
+
 
   },
   en: {
+    navPortfolioPoneVQQ:"Description: a catalog of music artists, their songs, biographies, and reviews.",
+  navPortfolioJSQQ: "JavaScript - Used;",
     navAbout: "About Me",
     navCapabilities: "Experience",
     navPortfolio: "Portfolio",
@@ -136,6 +141,8 @@ navPortfolioHTMLV: "HTML - Використано тільки дескопт в
 
   },
   cz: {
+        navPortfolioPoneVQQ:"Popis: katalog hudebních umělců, jejich písní, biografií a recenzí.",
+    navPortfolioJSQQ: "JavaScript - Použito;",
     navAbout: "O mně",
     navCapabilities: "Zkušenosti",
     navPortfolio: "Portfolio",
