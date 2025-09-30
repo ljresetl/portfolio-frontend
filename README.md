@@ -16,6 +16,8 @@ API integration
 
 📁 Projects
 
+React Movies – a web app for browsing movie information, built with React, TypeScript, and Vite.
+
 💼 Financial Consulting
 Description: A one-page responsive website for a UK-based financial consulting company.
 Technologies: HTML, CSS, JavaScript
