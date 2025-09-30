@@ -141,7 +141,8 @@ navPortfolioCSSJ:"JS - Використано;",
     navPortfolioPoneV: "Description: A responsive one-page website for a music artist showcasing new singles and an upcoming album. The website includes an integrated audio player.",
     navPortfolioHTMLV: "HTML - Desktop version only",
     navPortfolioCSSR: "React – Used;",
-navPortfolioCSST: "TypeScript – Used;",
+    navPortfolioCSST: "TypeScript – Used;",
+
 navPortfolioCSSJ: "JavaScript – Used;",
 
   },
