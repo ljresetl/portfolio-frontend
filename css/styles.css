@@ -699,7 +699,8 @@ header {
 }
 
 .project-list-p-opis {
-  min-height: 103px;
+  /* min-height: 103px; */
+  height: 133px;
 }
 
 .container-section-four-a {
@@ -765,7 +766,6 @@ header {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    min-height: ;
   }
 
   .img {
