@@ -42,6 +42,6 @@ form.addEventListener("submit", async (e) => {
     addMessage(botMessage, "bot");
   } catch (err) {
     console.error(err);
-    addMessage("Виникла помилка, спробуйте пізніше.", "bot");
+    addMessage("В процесі розробки..Зараз Error..", "bot");
   }
 });
