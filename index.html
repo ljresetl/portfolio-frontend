@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://ljresetl.github.io/portfolio-frontend/"
+    />
+    <title>Vitalii Baranov – Frontend Developer | Responsive Websites</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/1995/1995574.png"
+    />
+    <!-- темна тема -->
+    <link id="theme-link" rel="stylesheet" href="./css/styles-dark.css" />
+    <!-- світла тема -->
+    <link
+      id="theme-light"
+      rel="stylesheet"
+      href="./css/styles-light.css"
+      disabled
+    />
+    <!-- стилі чат-бота -->
+    <link rel="stylesheet" href="./chatbot/chatbot.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="Frontend Developer створюю сучасні адаптивні сайти з мінімальним використанням margin і padding, активно використовую flex-box, grid та інтегрую зовнішні API."
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <nav class="navigation" aria-label="Головне меню">
+          <p class="logo">FrontEnd</p>
+          <ul class="header-ul">
+            <li class="header-li">
+              <a href="#about" data-i18n="navAbout">Про мене</a>
+            </li>
+            <li class="header-li">
+              <a href="#capabilities" data-i18n="navCapabilities">Досвід</a>
+            </li>
+            <li class="header-li">
+              <a href="#portfolio" data-i18n="navPortfolio">Портфоліо</a>
+            </li>
+            <li class="header-li">
+              <a href="#connect" data-i18n="navConnect">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- кнопки переключення мови початок -->
+        <div class="language-switcher">
+          <!-- перемикач на свутлу-темну тему сайту -->
+          <button
+            type="button"
+            id="theme-toggle"
+            class="theme-switcher"
+            aria-label="Змінити тему"
+          >
+            🌙
+          </button>
+          <button type="button" class="language-switcher-button" data-lang="ua">
+            Українська
+          </button>
+          <button type="button" class="language-switcher-button" data-lang="en">
+            English
+          </button>
+          <button type="button" class="language-switcher-button" data-lang="cz">
+            Čeština
+          </button>
+        </div>
+        <!-- кнопки переключення мови кінець -->
+        <!-- Бургер-меню початок -->
+        <button class="burger-menu" type="button" aria-label="Відкрити меню">
+          <svg class="burger-menu-icon" width="44" height="44">
+            <use href="./images/icons.svg#icon-Frame-3"></use>
+          </svg>
+        </button>
+        <!-- Бургер-меню кінець -->
+        <!-- мобільне меню початок -->
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-btn">
+            <button
+              type="button"
+              class="close-mobile-menu"
+              id="closeMobileMenu"
+              aria-label="Закрити меню"
+            >
+              <svg width="14" height="14" class="mobile-menu-btn-svg">
+                <use
+                  href="./images/icons.svg#icon-close-black"
+                  width="12"
+                  height="12"
+                ></use>
+              </svg>
+            </button>
+          </div>
+          <div class="mobile-full-item">
+            <ul class="mobile-menu-list">
+              <li>
+                <a href="index.html" class="mobile-menu-link">FrontEnd</a>
+              </li>
+              <li>
+                <a href="#aboutme" class="menu-link" data-i18n="navAbout"
+                  >Про мене</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#capabilities"
+                  class="mobile-menu-link"
+                  data-i18n="navCapabilities"
+                  >Досвід</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="mobile-menu-link"
+                  data-i18n="navPortfolio"
+                  >Портфоліо</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#connect"
+                  class="mobile-menu-link"
+                  data-i18n="navConnect"
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+
+            <!-- Ось тут вставка -->
+            <div class="connect-svg connect-svg-mobile">
+              <a
+                href="www.linkedin.com/in/vitalii-baranov-222439377"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg width="32" height="32" class="about-me-svg-link-connect">
+                  <use
+                    href="./images/icons.svg#icon-linkendin"
+                    class="use-connect"
+                  ></use>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/ljresetl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg width="32" height="32" class="about-me-svg-link-connect">
+                  <use
+                    href="./images/icons.svg#icon-github"
+                    class="use-connect"
+                  ></use>
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X Twitter"
+              >
+                <svg width="32" height="32" class="about-me-svg-link-connect">
+                  <use
+                    href="./images/icons.svg#icon-x"
+                    class="use-connect"
+                  ></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/ljresetl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg width="32" height="32" class="about-me-svg-link-connect">
+                  <use
+                    href="./images/icons.svg#icon-instagram"
+                    class="use-connect"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Ось кінець вставки -->
+          </div>
+        </div>
+
+        <!-- мобільне меню кінець -->
+      </div>
+    </header>
+
+    <main>
+      <section class="aboutme" id="about">
+        <div class="container about-me-container">
+          <h1 class="about-me-h" data-i18n="navAboutMe">About Me</h1>
+          <div class="about-me-right">
+            <p class="about-me-p" data-i18n="navAboutMeP" id="resume">
+              Я — фронтенд-розробник із Ліберця, Чехія. Маю технічну освіту у
+              сфері комп’ютерних систем та спеціалізуюся на створенні сучасних
+              вебінтерфейсів. Мої основні пріоритети — це якість коду,
+              адаптивність і доступність для користувачів. Постійно працюю над
+              вдосконаленням навичок і освоєнням нових інструментів.
+            </p>
+            <p class="about-me-p about-me-p-two" data-i18n="navAboutMeTwoP">
+              У своїй роботі я поєдную прагматичний підхід і креативність, адже
+              вважаю, що кожен інтерфейс має бути не лише функціональним, а й
+              приємним у використанні. З особливим інтересом досліджую
+              JavaScript та сучасні фреймворки, щоб створювати ефективні рішення
+              для складних завдань. Створюю односторінкові сайти, покращую
+              UI/UX, працюю з HTML, CSS, JS, інтегрую зовнішні API. Поза
+              програмуванням надихаюся сім’єю та новими ідеями, які допомагають
+              мені розвиватися як фахівцю й особистості.
+            </p>
+            <div class="button-a-a">
+              <!-- <button type="button" class="about-me-button"> -->
+              <a
+                href="files/Vitalii_Baranov_Frontend_Developer.pdf"
+                download
+                class="about-me-button"
+                data-i18n="navButtonResume"
+              >
+                Завантажити резюме
+                <svg class="about-me-svg" width="20" height="20">
+                  <use href="./images/icons.svg#icon-bx-downloadsvg"></use>
+                </svg>
+              </a>
+              <!-- </button> -->
+
+              <a
+                href="https://www.linkedin.com/in/vitalii-baranov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="about-me-a"
+              >
+                <svg width="24" height="24" class="about-me-svg-link">
+                  <use href="./images/icons.svg#icon-linkendin"></use>
+                </svg>
+              </a>
+
+              <a
+                href="https://t.me/ljresetl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+                class="about-me-a"
+              >
+                <svg width="24" height="24" class="about-me-svg-link">
+                  <use href="./images/icons.svg#icon-telegram"></use>
+                </svg>
+              </a>
+
+              <a
+                href="https://github.com/ljresetl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                class="about-me-a"
+              >
+                <svg width="24" height="24" class="about-me-svg-link">
+                  <use href="./images/icons.svg#icon-github"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="foto">
+        <div class="container foto-container">
+          <img
+            srcset="./images/343.jpg 1x, ./images/686.jpg 2x"
+            src="./images/343.jpg"
+            width="343"
+            height="343"
+            alt="front-end"
+            class="my-foto"
+          />
+          <div class="about-me-text">
+            <h1 class="about-me-text-h" data-i18n="navAboutTextH">
+              Привіт! Я Віталій — Frontend розробник-початківець
+            </h1>
+            <p class="about-me-text-p" data-i18n="navAboutTextP">
+              Наразі я активно вивчаю JavaScript і проходжу курси на Fullstack
+              розробника, щоб стати професіоналом у веб-розробці.
+            </p>
+            <p class="about-me-text-p" data-i18n="navAboutTextPtwo">
+              Маю міцні знання HTML та CSS, вмію створювати адаптивні і
+              привабливі інтерфейси, що працюють на різних пристроях.
+            </p>
+            <p class="about-me-text-p" data-i18n="navAboutTextPthree">
+              Працюю над проектами, щоб покращувати навички і освоювати нові
+              технології крок за кроком.
+            </p>
+            <p class="about-me-text-p" data-i18n="navAboutTextPfour">
+              Вірю, що постійне навчання і практика — це ключ до успіху у
+              IT-сфері.
+            </p>
+            <p class="about-me-text-p" data-i18n="navAboutTextPfive">
+              Я відкритий до нових викликів і готовий долучатися до цікавих
+              проектів, де зможу застосувати свої знання і продовжувати рости.
+            </p>
+            <p class="about-me-text-p" data-i18n="navAboutTextPsix">
+              Якщо шукаєш мотивованого і цілеспрямованого розробника, який
+              швидко вчиться — зв'яжись зі мною!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" class="capabilities">
+        <div class="container capabilities-container">
+          <h2 class="capabilities-h" data-i18n="navCapabilitiesH">
+            Мої навички
+          </h2>
+          <div class="capabilities-right">
+            <p class="capabilities-p" data-i18n="navCapabilitiesP">
+              Розвиваюся щодня, щоб бути в курсі сучасних технологій і трендів у
+              веб-розробці. Вірю, що наполегливість і постійне навчання
+              допоможуть мені досягти нових вершин у кар'єрі. Готовий братися за
+              складні проєкти та швидко вивчати нові інструменти.
+            </p>
+            <ul class="capabilities-ul">
+              <li class="capabilities-li">HTML</li>
+              <li class="capabilities-li">CSS</li>
+              <li class="capabilities-li">Javascript</li>
+              <li class="capabilities-li">Figma</li>
+              <li class="capabilities-li">Vite</li>
+              <li class="capabilities-li">React</li>
+              <li class="capabilities-li">TypeScript</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience">
+        <div class="container experience-section">
+          <h3 class="experience-h" data-i18n="navExperienceH">Мій досвід</h3>
+          <div class="experience-right">
+            <div class="experience-right-top">
+              <p class="experience-p" data-i18n="navExperienceP">
+                Самостійне навчання та практичні проєкти
+              </p>
+              <p
+                class="experience-p experience-p-two"
+                data-i18n="navExperiencePtwo"
+              >
+                2024 — теперішній час
+              </p>
+            </div>
+            <p
+              class="experience-p experience-p-two experience-p-two-two"
+              data-i18n="navExperiencePthree"
+            >
+              Активно вивчаю фронтенд-розробку, працюю над навчальними й
+              особистими проєктами для закріплення знань на практиці. Опановую
+              сучасні технології (HTML, CSS, JavaScript) та поступово розширюю
+              компетенції у сфері веброзробки. Приклади моїх проектів можна
+              побачити нижче.
+            </p>
+            <div class="experience-right-down">
+              <p
+                class="experience-p experience-p-three"
+                data-i18n="navExperiencePfour"
+              >
+                Курси та онлайн-навчання
+              </p>
+              <p
+                class="experience-p experience-p-four experience-p-four-four"
+                data-i18n="navExperiencePsix"
+              >
+                2024 — теперішній час
+              </p>
+            </div>
+            <p
+              class="experience-p experience-p-five"
+              data-i18n="navExperiencePseven"
+            >
+              Самоосвіта
+            </p>
+            <p
+              class="experience-p experience-p-two"
+              data-i18n="navExperiencePeight"
+            >
+              Проходжу навчальні програми та онлайн-курси, які допомагають
+              розвивати практичні навички створення адаптивних і доступних
+              інтерфейсів. Регулярно практикуюся у написанні коду, реалізовую
+              власні мініпроєкти та вдосконалюю вміння працювати з сучасними
+              інструментами веброзробки. У 2024 році розпочав курси Fullstack
+              розробки у компанії <span class="goit">GoIT</span> і продовжую
+              навчання до сьогодні.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <div class="container portfolio-container">
+          <h3 class="portfolio-container-h" data-i18n="navPortfolioH">
+            Приклади робіт
+          </h3>
+          <!-- рендер карток через js -->
+          <div class="portfolio-list" id="portfolio-list"></div>
+          <!-- Кнопка показати більше початок -->
+          <div>
+            <button
+              type="button"
+              class="button-loadmore"
+              id="loadMore"
+              data-i18n="navPortfolioLoadMore"
+            >
+              Показати більше
+            </button>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="./js/loadMore.js"></script>
+          <!-- Кнопка показати більше початок -->
+        </div>
+      </section>
+
+      <section id="connect" class="connect">
+        <div class="container connect-container">
+          <div class="connect-container-one">
+            <h3 class="connect-container-one-h" data-i18n="navСonnect">
+              Зв'язок
+            </h3>
+
+            <!-- Перший параграф -->
+            <p class="connect-container-one-p">
+              <span data-i18n="navСonnectP">Скажи привіт тут</span>
+              <a href="mailto:ljresetl@gmail.com" class="connect-span-a"
+                >ljresetl@gmail.com</a
+              >
+            </p>
+
+            <!-- Другий параграф -->
+            <p class="connect-container-one-p">
+              <span data-i18n="navСonnectPtwo"
+                >Для більшої інформації ось моє</span
+              >
+              <a
+                data-i18n="navСonnectR"
+                class="connect-span-resume"
+                href="#resume"
+                >Резюме</a
+              >
+            </p>
+
+            <!-- Соцмережі -->
+            <div class="connect-svg">
+              <a
+                href="https://www.linkedin.com/in/vitalii-baranov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg width="32" height="32" class="about-me-svg-link-connect">
+                  <use
+                    href="./images/icons.svg#icon-linkendin"
+                    class="use-connect"
+                  ></use>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/ljresetl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg width="32" height="32" class="about-me-svg-link-connect">
+                  <use
+                    href="./images/icons.svg#icon-github"
+                    class="use-connect"
+                  ></use>
+                </svg>
+              </a>
+              <a
+                href="https://t.me/ljresetl"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+                class="about-me-a"
+              >
+                <svg width="24" height="24" class="about-me-svg-link">
+                  <use href="./images/icons.svg#icon-telegram"></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/ljresetl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg width="32" height="32" class="about-me-svg-link-connect">
+                  <use
+                    href="./images/icons.svg#icon-instagram"
+                    class="use-connect"
+                  ></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="connect-container-two">
+            <form
+              action="https://formspree.io/f/mzzggoog"
+              method="POST"
+              class="modal-form"
+              id="contact-form"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Нове повідомлення з сайту"
+              />
+
+              <label class="modal-label" for="name" data-i18n="navСonnectName"
+                >І'мя</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="modal-input"
+                required
+                placeholder="Your name"
+              />
+
+              <label
+                class="modal-label"
+                for="phone"
+                data-i18n="navСonnectTelefon"
+                >Телефон</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="modal-input"
+                placeholder="+38 (0XX) XXX-XX-XX"
+                required
+              />
+
+              <label class="modal-label" for="email" data-i18n="navСonnectMail"
+                >Емейл</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="modal-input"
+                required
+                placeholder="your@email.com"
+              />
+
+              <label
+                class="modal-label"
+                for="message"
+                data-i18n="navСonnectComment"
+                >Коментар</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                class="modal-textarea"
+                placeholder="Your message"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="modal-button"
+                data-i18n="navСonnectButtonSend"
+              >
+                Послати
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container_footer">
+        <p class="container_footer-p">© 2025 Vitalii Baranov</p>
+      </div>
+    </footer>
+    <!-- Підключення JS -->
+    <script src="./js/mobile-menu.js" defer></script>
+    <script src="./js/translation.js" defer></script>
+    <script src="./js/kartku.js" defer></script>
+    <script src="./js/theme-toggle-light-css.js" defer></script>
+    <script src="./js/form-submit.js" defer></script>
+    <script src="./chatbot/chatbot.js" defer></script>
+
+    <!-- чат-бот початок -->
+    <div id="chatbot">
+      <div id="chatbot-icon">💬</div>
+      <div id="chatbot-window">
+        <div id="chatbot-header">Помічник</div>
+        <div id="chatbot-messages"></div>
+        <form id="chatbot-form">
+          <input
+            type="text"
+            id="chatbot-name"
+            placeholder="Твоє імʼя"
+            required
+          />
+          <input
+            type="email"
+            id="chatbot-email"
+            placeholder="Твій email"
+            required
+          />
+          <input
+            type="text"
+            id="chatbot-input"
+            placeholder="Напиши повідомлення..."
+            required
+          />
+          <button type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- чат-бот кінець -->
+  </body>
+</html>

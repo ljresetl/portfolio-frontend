@@ -1,0 +1,87 @@
+body,
+.about-me-container,
+.foto-container,
+.capabilities,
+.portfolio-container,
+.project-list-h3,
+.container-section-four-p,
+.connect-container-one-h,
+.connect-span-resume,
+.connect-span-a,
+.logo,
+.navigation,
+.header-ul,
+.header-li,
+.experience-h,
+.experience-p,
+.experience-p-three,
+.about-me-text-h {
+  color: #111;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+header,
+footer,
+.modal-input,
+.modal-textarea,
+.mobile-menu {
+  background-color: #fff;
+}
+
+.about-me-text-p,
+.about-me-p-two,
+.capabilities-p,
+.experience-p-two,
+.experience-p-four,
+.project-list-p-opis,
+.container-section-four-li,
+.container-section-four-a,
+.connect-container-one-p,
+.modal-form,
+.container_footer-p {
+  color: #555;
+}
+
+.about-me-button,
+.modal-button,
+.close-mobile-menu {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.about-me-svg {
+  background-color: #28a745;
+}
+
+.capabilities-li {
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+.experience-p-five {
+  color: #28a745;
+}
+
+.site {
+  color: #111;
+  background-color: #90a92c;
+}
+
+.modal-input,
+.modal-textarea {
+  border: 1px solid #ccc;
+}
+
+.about-me-svg-link-connect,
+.about-me-svg-link {
+  fill: #9abd0f;
+}
+
+@media screen and (min-width: 1440px) {
+  .container-section-four-ul-project:hover {
+    background-color: #a5caab;
+  }
+}

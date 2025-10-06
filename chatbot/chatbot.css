@@ -1,0 +1,71 @@
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+#chatbot-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2d6a4f; /* темно-зелений */
+}
+
+#chatbot-window {
+  display: none;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #598e71;
+  background: #e9f5ec; /* світло-зелений фон */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 10px;
+}
+
+#chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message.user {
+  text-align: right;
+  background: #3d7651; /* світліший зелений */
+  margin: 5px;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+.message.bot {
+  text-align: left;
+  background: #3e865f; /* більш насичений зелений */
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+#chatbot-form input,
+#chatbot-form button {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #2d6a4f;
+  border-radius: 5px;
+  background: #e9f5ec;
+  color: #2d6a4f;
+}
+
+#chatbot-form button {
+  cursor: pointer;
+  background: #2d6a4f;
+  color: #fff;
+  font-weight: bold;
+}
+
+#chatbot-form button:hover {
+  background: #1b4332;
+}
